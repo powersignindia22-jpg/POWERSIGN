@@ -1,4 +1,4 @@
-import { MapPin, Mail, Phone, Leaf, Sun, Zap } from "lucide-react";
+import { MapPin, Mail, Phone, Leaf, Sun, Zap, ChevronRight } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { Link } from "react-router-dom";
 import { contactInfo, socialLinks } from "@/data/contact";
@@ -116,6 +116,29 @@ const Footer = () => {
                             <Link to="/terms" className="text-white/10 hover:text-white text-[9px] uppercase tracking-[0.2em] transition-colors">Terms</Link>
                         </div>
                     </div>
+
+                    {/* Cavell attribution (glow-style button) */}
+                    <a
+                        href="https://cavelltech.in"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="relative group inline-flex items-center gap-3 px-4 py-2 border border-green-400 rounded-full text-[9px] uppercase tracking-widest font-black text-white transition-all duration-300 overflow-hidden"
+                    >
+                        {/* glow effect */}
+                        <span className="absolute inset-0 bg-green-400 opacity-0 group-hover:opacity-20 transition-opacity"></span>
+                        <span className="relative z-10 flex items-center gap-2">
+                            <span className="opacity-60 group-hover:opacity-100 transition-opacity">DESIGNED &amp; BUILT BY</span>
+                            <img
+                                src="https://cavelltech.in/logo.png"
+                                alt="Cavell Tech"
+                                className="h-4 w-auto object-contain"
+                            />
+                            <span className="flex items-center">
+                                <span className="ml-1">CAVELL</span>
+                                <ChevronRight className="w-3.5 h-3.5 ml-1" />
+                            </span>
+                        </span>
+                    </a>
 
                     <div className="flex items-center gap-6">
                         <div className="flex items-center gap-2 text-white/20 text-[9px] font-black uppercase tracking-widest">
