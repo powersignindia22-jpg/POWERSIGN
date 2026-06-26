@@ -25,8 +25,8 @@ export interface SocialLink {
 
 export const contactInfo = {
   phone: {
-    display: "+91 97784 89601",
-    href: "tel:+919778489601",
+    display: "+91 75618 22446",
+    href: "tel:+917561822446",
   },
   email: {
     primary: "powersignindia@gmail.com",
@@ -34,8 +34,8 @@ export const contactInfo = {
     href: "mailto:powersignindia@gmail.com",
   },
   whatsapp: {
-    number: "919778489601",
-    href: "https://wa.me/919778489601",
+    number: "917561822446",
+    href: "https://wa.me/917561822446",
   },
   offices: [
     {

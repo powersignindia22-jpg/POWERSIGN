@@ -1,21 +1,36 @@
 import { motion } from "framer-motion";
 import { Home, Building2, Wrench, ArrowLeft, Zap, ShieldCheck, Clock, Settings, Headphones, Sun, CheckCircle, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SolarDust from "@/components/SolarDust";
 import { contactInfo, getWhatsAppLink } from "@/data/contact";
 import { useEffect } from "react";
+import SEO from "@/components/SEO";
 
 const ServicesPage = () => {
+  const { hash } = useLocation();
+
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+    if (hash) {
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [hash]);
 
   return (
     <div className="min-h-screen bg-ivory relative selection:bg-sun/30 overflow-x-hidden">
+      <SEO 
+        title="Solar Services & Solutions | POWERSIGN INDIA"
+        description="Explore our premium solar services: Residential Solar, Commercial Grids, and Lithium Energy Storage solutions in Kerala."
+      />
       {/* Background System (Matching Index) */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         <div className="absolute inset-0 opacity-[0.06] bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:40px_40px]" />

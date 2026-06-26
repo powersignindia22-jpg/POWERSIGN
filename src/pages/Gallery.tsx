@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SolarDust from "@/components/SolarDust";
+import SEO from "@/components/SEO";
 import { useEffect } from "react";
 import { galleryItems } from "@/data/gallery";
 import { Button } from "@/components/ui/button";
@@ -14,6 +15,11 @@ const GalleryPage = () => {
 
   return (
     <div className="min-h-screen bg-ivory relative selection:bg-sun/30 overflow-x-hidden">
+      <SEO 
+        title="Project Gallery | POWERSIGN INDIA"
+        description="View our recent residential and commercial solar installations across Kerala. See our premium workmanship in action."
+      />
+      
       {/* Background System */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         <div className="absolute inset-0 opacity-[0.06] bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:40px_40px]" />

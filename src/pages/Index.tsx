@@ -11,10 +11,15 @@ import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import SolarDust from "@/components/SolarDust";
+import SEO from "@/components/SEO";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-ivory relative selection:bg-sun/30 overflow-x-hidden">
+      <SEO 
+        title="POWERSIGN INDIA - Premium Solar Energy Solutions in Kerala"
+        description="Kerala's trusted solar energy partner. Premium solar installations, lithium inverters, and ON-GRID rooftop solutions for homes and businesses."
+      />
       {/* --- BACKGROUND LAYER SYSTEM --- */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         {/* 1. High-Visibility Grid */}

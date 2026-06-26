@@ -55,6 +55,7 @@ const ProjectsSection = () => {
                   <img
                     src={project.image}
                     alt="Solar Project"
+                    loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-[2000ms] ease-out group-hover:scale-110"
                   />
 

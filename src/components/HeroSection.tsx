@@ -114,9 +114,9 @@ const HeroSection = () => {
   );
 
   return (
-    <section id="home" className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-transparent pt-24 lg:pt-32">
+    <section id="home" className="relative min-h-[90vh] lg:min-h-screen flex flex-col justify-center overflow-hidden bg-transparent pt-20 pb-10 lg:pt-32 lg:pb-0">
       
-      <div className="container relative z-10 mx-auto px-5">
+      <div className="container relative z-10 mx-auto px-4 sm:px-5">
         <div className="flex flex-col lg:grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
           {/* --- RIGHT COLUMN: VISUAL --- */}
@@ -124,7 +124,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2 }}
-            className="lg:col-span-5 order-1 lg:order-2 w-full"
+            className="lg:col-span-5 order-1 lg:order-2 w-full mt-8 lg:mt-0"
           >
             <HybridSolarVisual />
           </motion.div>
@@ -138,26 +138,26 @@ const HeroSection = () => {
           >
             {/* 1. Ultra-Premium Editorial Branding */}
             <div className="flex flex-col items-center lg:items-start mb-16 relative">
-                <div className="flex items-stretch gap-6 mb-8">
+                <div className="flex items-center lg:items-stretch gap-4 lg:gap-6 mb-8">
                     {/* Vertical Suture Line */}
-                    <div className="w-1 bg-gradient-to-b from-sun via-sun/20 to-transparent rounded-full" />
+                    <div className="w-1 bg-gradient-to-b from-sun via-sun/20 to-transparent rounded-full h-12 lg:h-auto" />
                     
                     <div className="flex flex-col justify-center">
-                        <h2 className="text-3xl lg:text-4xl font-display font-black tracking-[0.6em] uppercase text-charcoal-dark leading-none group cursor-default">
+                        <h2 className="text-[1.35rem] sm:text-3xl lg:text-4xl font-display font-black tracking-[0.15em] sm:tracking-[0.3em] lg:tracking-[0.6em] uppercase text-charcoal-dark leading-none group cursor-default whitespace-nowrap">
                             POWER<span className="text-sun opacity-80 group-hover:opacity-100 transition-opacity">SIGN</span>
                         </h2>
                     </div>
                 </div>
 
                 {/* Floating Glass Jewel (Trust Badge) */}
-                <div className="relative group cursor-default">
+                <div className="relative group cursor-default w-full max-w-[320px] lg:max-w-none mx-auto lg:mx-0">
                     <div className="absolute inset-0 bg-sun/5 rounded-full blur-xl group-hover:bg-sun/10 transition-all duration-700" />
-                    <div className="relative flex items-center gap-3 px-6 py-3 rounded-full bg-white/40 backdrop-blur-2xl border border-white/60 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.05)] group-hover:shadow-sun/10 transition-all duration-500">
-                        <div className="flex h-2 w-2 relative">
+                    <div className="relative flex items-center justify-center lg:justify-start gap-3 px-4 lg:px-6 py-3 rounded-full bg-white/40 backdrop-blur-2xl border border-white/60 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.05)] group-hover:shadow-sun/10 transition-all duration-500">
+                        <div className="flex h-2 w-2 relative shrink-0">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sun opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-sun"></span>
                         </div>
-                        <span className="text-[12px] lg:text-[13px] font-extrabold tracking-tight text-charcoal-dark/90 font-ml leading-none">
+                        <span className="text-[11px] sm:text-[12px] lg:text-[13px] font-extrabold tracking-tight text-charcoal-dark/90 font-ml leading-none truncate lg:overflow-visible text-center lg:text-left">
                             സൗരോർജ്ജം, <span className="text-sun-dark">സുരക്ഷിതം, സമാധാനം</span>
                         </span>
                     </div>
@@ -165,8 +165,8 @@ const HeroSection = () => {
             </div>
 
             {/* 2. Headline with Editorial Flair */}
-            <h1 className="font-display text-[2.8rem] sm:text-6xl lg:text-[6rem] font-medium leading-[1.1] lg:leading-[0.9] text-charcoal-dark mb-10 tracking-tighter">
-              <span className="block mb-4 text-charcoal/40 font-light tracking-normal italic text-[0.4em] lg:text-[0.35em] uppercase not-italic font-sans font-bold tracking-[0.2em] ml-1">
+            <h1 className="font-display text-[2.5rem] sm:text-5xl lg:text-[6rem] font-medium leading-[1.1] lg:leading-[0.9] text-charcoal-dark mb-8 lg:mb-10 tracking-tighter text-center lg:text-left">
+              <span className="block mb-3 lg:mb-4 text-charcoal/50 font-sans font-bold tracking-[0.15em] sm:tracking-[0.2em] text-[0.35em] uppercase ml-1">
                 Engineering The
               </span>
               Power Your{" "}
@@ -177,19 +177,19 @@ const HeroSection = () => {
                 </svg>
               </span>
               <br/>
-              <span className="italic font-light text-charcoal/90 relative">
+              <span className="italic font-light text-charcoal/90 relative inline-block mt-2 lg:mt-0">
                 With Solar Energy
-                <span className="absolute -right-8 top-0 hidden lg:block">
+                <span className="absolute -right-6 lg:-right-8 top-0 hidden lg:block">
                     <Zap className="w-8 h-8 text-sun/20 rotate-12" />
                 </span>
               </span>
             </h1>
 
             {/* 3. Description with Vertical Accents */}
-            <div className="relative pl-0 lg:pl-8 mb-12 max-w-xl mx-auto lg:mx-0">
+            <div className="relative pl-0 lg:pl-8 mb-10 max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
               <div className="hidden lg:block absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-sun via-amber/20 to-transparent rounded-full" />
-              <p className="text-base lg:text-xl text-charcoal/60 leading-relaxed">
-                Transform your property with <span className="text-charcoal-dark font-semibold italic">bespoke solar ecosystems</span> featuring <span className="text-charcoal-dark font-medium underline underline-offset-8 decoration-sun/30">On-site Replacement Warranty</span> and uncompromising aesthetics.
+              <p className="text-sm sm:text-base lg:text-xl text-charcoal/60 leading-relaxed px-4 lg:px-0">
+                Transform your property with <span className="text-charcoal-dark font-semibold italic">bespoke solar ecosystems</span> featuring <span className="text-charcoal-dark font-medium underline underline-offset-4 lg:underline-offset-8 decoration-sun/30">On-site Replacement Warranty</span> and uncompromising aesthetics.
               </p>
             </div>
 
@@ -234,11 +234,11 @@ const HeroSection = () => {
         </div>
 
         {/* --- STATS BAR --- */}
-        <div className="mt-16 lg:mt-24 mb-[15px] grid grid-cols-2 lg:grid-cols-4 gap-4 p-4 lg:p-3 bg-white/40 backdrop-blur-xl border border-charcoal/5 rounded-[3rem] lg:rounded-full shadow-2xl">
+        <div className="mt-12 lg:mt-24 mb-[15px] grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-4 p-3 lg:p-3 bg-white/40 backdrop-blur-xl border border-charcoal/5 rounded-[2rem] lg:rounded-full shadow-xl lg:shadow-2xl mx-2 lg:mx-0">
             {stats.map((stat, index) => (
-                <div key={index} className="flex flex-col items-center justify-center py-8 px-4 hover:bg-white/80 rounded-[2.5rem] transition-all duration-500 group">
-                    <div className="font-display text-3xl lg:text-5xl font-bold text-charcoal-dark leading-none mb-2 group-hover:text-sun-dark transition-colors">{stat.value}</div>
-                    <div className="text-[11px] lg:text-xs font-black uppercase tracking-[0.2em] text-charcoal/30 text-center group-hover:text-charcoal/60 transition-colors">{stat.label}</div>
+                <div key={index} className="flex flex-col items-center justify-center py-6 lg:py-8 px-2 lg:px-4 hover:bg-white/80 rounded-[1.5rem] lg:rounded-[2.5rem] transition-all duration-500 group">
+                    <div className="font-display text-2xl sm:text-3xl lg:text-5xl font-bold text-charcoal-dark leading-none mb-1 lg:mb-2 group-hover:text-sun-dark transition-colors">{stat.value}</div>
+                    <div className="text-[10px] lg:text-xs font-black uppercase tracking-[0.1em] lg:tracking-[0.2em] text-charcoal/40 text-center group-hover:text-charcoal/60 transition-colors whitespace-nowrap">{stat.label}</div>
                 </div>
             ))}
         </div>

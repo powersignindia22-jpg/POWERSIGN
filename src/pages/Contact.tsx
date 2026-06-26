@@ -9,6 +9,7 @@ import SolarDust from "@/components/SolarDust";
 import { useEffect, useState } from "react";
 import { contactMethods, contactInfo, socialLinks } from "@/data/contact";
 import { toast } from "sonner";
+import SEO from "@/components/SEO";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -80,6 +81,10 @@ Sent from POWERSIGN Contact Form
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-sun/5 rounded-full blur-[150px]" />
       </div>
 
+      <SEO 
+        title="Contact POWERSIGN | Solar Installation & Queries"
+        description="Get in touch with POWERSIGN INDIA for a free quote on solar installations, commercial grids, and energy storage solutions in Kerala."
+      />
       <SolarDust />
       <Header />
 

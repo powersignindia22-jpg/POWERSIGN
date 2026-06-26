@@ -2,6 +2,7 @@ import { MapPin, Mail, Phone, Leaf, Sun, Zap, ChevronRight } from "lucide-react"
 import logo from "@/assets/logo.png";
 import { Link } from "react-router-dom";
 import { contactInfo, socialLinks } from "@/data/contact";
+import { motion } from "framer-motion";
 
 const Footer = () => {
       const quickLinks = [
@@ -117,28 +118,44 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Cavell attribution (glow-style button) */}
-                    <a
+                    {/* Cavell attribution (Premium Animated Badge) */}
+                    <motion.a
                         href="https://cavelltech.in"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="relative group inline-flex items-center gap-3 px-4 py-2 border border-green-400 rounded-full text-[9px] uppercase tracking-widest font-black text-white transition-all duration-300 overflow-hidden"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="relative group inline-flex items-center gap-3 px-5 py-2.5 rounded-full text-[9px] uppercase tracking-widest font-black text-white transition-all duration-500 overflow-hidden shadow-sm hover:shadow-md bg-gradient-to-r from-black via-neutral-900 to-black"
                     >
-                        {/* glow effect */}
-                        <span className="absolute inset-0 bg-green-400 opacity-0 group-hover:opacity-20 transition-opacity"></span>
+                        {/* Subtle Gradient Border */}
+                        <div className="absolute inset-0 rounded-full p-[1px] bg-gradient-to-r from-white/5 via-green-500/20 to-white/5 [mask-image:linear-gradient(#fff_0_0)]" style={{ WebkitMaskComposite: 'xor', maskComposite: 'exclude' }} />
+                        
+                        {/* Animated background glow - very subtle */}
+                        <div className="absolute inset-0 bg-white/0 group-hover:bg-white/5 transition-colors duration-500" />
+
+                        {/* Shimmering light sweep */}
+                        <motion.div 
+                            animate={{ x: ["-100%", "250%"] }}
+                            transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                            className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/5 to-transparent skew-x-12"
+                        />
+
                         <span className="relative z-10 flex items-center gap-2">
-                            <span className="opacity-60 group-hover:opacity-100 transition-opacity">DESIGNED &amp; BUILT BY</span>
-                            <img
-                                src="https://cavelltech.in/logo.png"
-                                alt="Cavell Tech"
-                                className="h-4 w-auto object-contain"
-                            />
-                            <span className="flex items-center">
-                                <span className="ml-1">CAVELL</span>
-                                <ChevronRight className="w-3.5 h-3.5 ml-1" />
-                            </span>
+                            <span className="opacity-40 group-hover:opacity-70 transition-opacity duration-300 text-white">DESIGNED &amp; BUILT BY</span>
+                            <div className="relative flex items-center gap-1.5">
+                                <img
+                                    src="https://cavelltech.in/logo.png"
+                                    alt="Cavell Tech"
+                                    className="h-4 w-auto object-contain brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity"
+                                    onError={(e) => { e.currentTarget.style.display = 'none' }}
+                                />
+                                <span className="flex items-center text-white/70 group-hover:text-white transition-colors font-bold tracking-[0.2em]">
+                                    CAVELL
+                                    <ChevronRight className="w-3 h-3 ml-0.5 text-white/40 group-hover:text-white/80 group-hover:translate-x-1 transition-all duration-300" />
+                                </span>
+                            </div>
                         </span>
-                    </a>
+                    </motion.a>
 
                     <div className="flex items-center gap-6">
                         <div className="flex items-center gap-2 text-white/20 text-[9px] font-black uppercase tracking-widest">

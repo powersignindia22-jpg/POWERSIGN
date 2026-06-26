@@ -90,6 +90,7 @@ const ProductSpotlight = () => {
                                 <img
                                     src={lionInverter}
                                     alt="LI-ON Inverter"
+                                    loading="lazy"
                                     className="w-full h-full object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.15)] group-hover:drop-shadow-[0_40px_80px_rgba(255,180,0,0.2)] transition-all duration-700"
                                 />
 
