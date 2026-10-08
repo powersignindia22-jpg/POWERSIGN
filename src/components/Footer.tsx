@@ -120,9 +120,9 @@ const Footer = () => {
 
                     {/* Cavell attribution (Premium Animated Badge) */}
                     <motion.a
-                        href="https://cavelltech.in"
+                        href="https://cavelltech.in/?utm_source=powersign&utm_medium=referral"
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="noopener"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="relative group inline-flex items-center gap-3 px-5 py-2.5 rounded-full text-[9px] uppercase tracking-widest font-black text-white transition-all duration-500 overflow-hidden shadow-sm hover:shadow-md bg-gradient-to-r from-black via-neutral-900 to-black"
